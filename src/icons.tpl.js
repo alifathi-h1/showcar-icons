@@ -1,5 +1,5 @@
 var iconNames = [
-    'info'
+    xxx
 ];
 
 var icons = {};
