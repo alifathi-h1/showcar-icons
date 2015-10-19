@@ -16,7 +16,7 @@ gulp.task('prepare', function (callback) {
                 files.push(file.substring(file.lastIndexOf('/') + 1, file.lastIndexOf('.svg')));
             });
 
-            var newContent = data.replace('xxx', "'" + files.join("',\n    '") + "'");
+            var newContent = data.replace("'{{iconNames}}'", "'" + files.join("',\n    '") + "'");
             require('fs').writeFile('src/icons.js', newContent, callback);
 
         })
