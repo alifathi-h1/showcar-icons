@@ -2,7 +2,7 @@
   "name": "showcar-icons",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/icons.min.js",
+  "main": "dist/showcar-icons.min.js",
   "scripts": {
     "gh": "node ghpages.js"
   },
