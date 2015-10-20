@@ -1,5 +1,5 @@
 var iconNames = [
-    '{{iconNames}}'
+    '@@iconNames'
 ];
 
 var icons = {};
