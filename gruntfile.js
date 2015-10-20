@@ -17,8 +17,8 @@ module.exports = function(grunt) {
                 entry: './src/icons.js',
                 output: {
                     path: path.join(__dirname, "dist/"),
-                    filename: "icons.min.js",
-                    sourceMapFilename: "icons.min.js.map"
+                    filename: "showcar-icons.min.js",
+                    sourceMapFilename: "showcar-icons.min.js.map"
                 },
                 devtool: 'source-map',
                 module: {
