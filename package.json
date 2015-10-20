@@ -2,7 +2,7 @@
   "name": "showcar-icons",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/icons.min.js",
   "scripts": {
     "gh": "node ghpages.js"
   },
@@ -23,10 +23,7 @@
     "url": "https://github.com/AutoScout24/showcar-icons/issues"
   },
   "devDependencies": {
-    "babel-core": "^5.8.25",
-    "babel-loader": "^5.3.2",
     "file-loader": "^0.8.4",
-    "gh-pages": "^0.4.0",
     "glob": "^5.0.15",
     "grunt": "^0.4.5",
     "grunt-replace": "^0.11.0",
@@ -35,7 +32,6 @@
     "raw-loader": "^0.5.1",
     "svgo": "^0.5.6",
     "svgo-loader": "^1.1.0",
-    "webpack": "^1.12.2",
-    "yargs": "^3.27.0"
+    "webpack": "^1.12.2"
   }
 }
