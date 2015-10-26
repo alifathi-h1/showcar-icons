@@ -18,8 +18,8 @@ To make the custom elements available within you frontend, it is necessary to in
 
 use the following to include an icon in your frontend
 
-    <x-icon type="t-online"></x-icon>
-    <x-icon type="flag/de"></x-icon>
+    <as24-icon type="t-online"></as24-icon>
+    <as24-icon type="flag/de"></as24-icon>
 
 All the available icons are placed within the icons folder, using subfolder is possible too.
 

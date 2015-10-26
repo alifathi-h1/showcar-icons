@@ -20,4 +20,4 @@ proto.attributeChangedCallback = function(attributeName, previousValue, value) {
     }
 };
 
-document.registerElement('x-icon', { prototype: proto });
+document.registerElement('as24-icon', { prototype: proto });
