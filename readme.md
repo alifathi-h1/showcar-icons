@@ -4,15 +4,16 @@ This module provides custom elements for simple inclusion of icons in your front
 
 ## Installation:
 
-To install showcar-icons within your project use npm:
+To install showcar-icons within your project use bower.
 
-    npm install git+ssh://github.com/AutoScout24/showcar-icons.git --save-dev
+    bower install --save git@github.com:AutoScout24/showcar-icons.git
 
 
 ## How to include:
-To make the custom elements available within you frontend, it is necessary to include some javascript
+To make the custom elements available within you frontend, it is necessary to include some javascript (depending on your directory structure)
 
-    require('showcar-icons');
+    require('showcar-icons/dist/showcar-icons.min.js');
+
 
 ## How to use:
 
