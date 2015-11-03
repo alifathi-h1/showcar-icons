@@ -21,3 +21,5 @@ proto.attributeChangedCallback = function(attributeName, previousValue, value) {
 };
 
 document.registerElement('as24-icon', { prototype: proto });
+
+window.showcarIconNames = iconNames;
