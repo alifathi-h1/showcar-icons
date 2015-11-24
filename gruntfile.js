@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+    "use strict";
+
     var moduleName = "icons";
     var loadConfig = function (name, module) {
         var result = {};
@@ -14,9 +16,10 @@ module.exports = function(grunt) {
         webpack: loadConfig("webpack")
     });
 
-    grunt.registerTask('default', ['replace', 'webpack']);
+    grunt.registerTask("default", ["build"]);
+    grunt.registerTask("build", ["replace", "webpack"]);
 
-    require('load-grunt-tasks')(grunt, {
-        pattern: ['grunt-*', "!grunt-cli"]
+    require("load-grunt-tasks")(grunt, {
+        pattern: ["grunt-*", "!grunt-cli"]
     });
 };

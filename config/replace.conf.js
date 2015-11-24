@@ -6,12 +6,12 @@ module.exports = (function() {
             patterns: [
                 {
                     match: /\'@@iconNames'/,
-                    replacement: function () {
-                        var files = grunt.file.expand('icons/**/*.svg');
+                    replacement: function() {
+                        var files = grunt.file.expand("icons/**/*.svg");
                         var resultFiles = [];
                         files.forEach(function (file) {
-                            file = file.replace('icons/', '');
-                            resultFiles.push(file.substring(0, file.lastIndexOf('.svg')));
+                            file = file.replace("icons/", "");
+                            resultFiles.push(file.substring(0, file.lastIndexOf(".svg")));
                         });
                         return "'" + resultFiles.join("',\n    '") + "'";
                     }
@@ -20,8 +20,8 @@ module.exports = (function() {
         },
         files: [
             {
-                src: ['src/icons.tpl.js'],
-                dest: 'src/icons.js'
+                src: ["src/icons.tpl.js"],
+                dest: "src/icons.js"
             }
         ]
     };
