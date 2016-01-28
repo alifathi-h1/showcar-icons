@@ -1,0 +1,46 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Description" : "Tatsu service template",
+
+  "Parameters" : {
+
+    "AccountName" : {
+      "Description" : "The name of the account, e.g. 'as24prod'",
+      "Type" : "String",
+      "AllowedValues" : ["as24prod", "as24dev"]
+    },
+    "AuthRole": {
+      "Description": "IAM role used to S3 authentication",
+      "Type": "String"
+    },
+    "S3ArtifactsBucket": {
+      "Description": "Name of the s3 bucket.",
+      "Type": "String"
+    },
+    "Service": {
+      "Description": "Name of the service.",
+      "Type": "String"
+    },
+    "Version" : {
+      "Description" : "Version of the service to launch.",
+      "Type" : "String"
+    }
+  },
+
+  "Conditions" : {
+    "FakeDependencies" : {"Fn::Equals" : ["@AccountName", "as24dev"]}
+  },
+
+  "Resources" : {
+    "ShowCarUiBucket" : {
+      "Type" : "AWS::S3::Bucket",
+      "Properties" : {
+        "AccessControl" : "PublicRead",
+        "BucketName" : { "Ref" : "S3ArtifactsBucket" },
+        "WebsiteConfiguration" : {
+          "IndexDocument" : "index.html"
+        }
+      }
+    }
+  }
+}
