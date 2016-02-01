@@ -4,6 +4,7 @@ require 'json'
 require 'aws-sdk-core'
 require 'autostacker24'
 require 'base64'
+require 'mime/types'
 
 Aws.use_bundled_cert!
 
@@ -84,12 +85,15 @@ task :publish do
   s3 = Aws::S3::Client.new
 
   artifacts.each {
-      |filename| s3.put_object(bucket: S3_ARTIFACTS_BUCKET,
-                  key: filename,
-                  body: File.read(filename),
-                  acl: 'public-read')
+      |file|
+        content_type = MIME::Types.type_for(file)[0]
+        s3.put_object(bucket: S3_ARTIFACTS_BUCKET,
+                      key: file,
+                      body: File.read(file),
+                      content_type: content_type.to_s,
+                      acl: 'public-read')
 
-    puts "Copied file: #{filename}"
+    log "Copied file: #{file}"
   }
 end
 
