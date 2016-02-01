@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.3/document-register-element.js"></script>
     <script src="../dist/showcar-icons.min.js"></script>
     <style type="text/css">
         body {
@@ -48,9 +49,6 @@
         window.showcarIconNames.forEach(function(name) {
             var item = document.createElement('li');
             item.innerHTML = '<as24-icon type="' + name + '"></as24-icon><p>' + name + '</p>';
-            if (name.substring(0, 4) == 'flag') {
-                item.querySelector('as24-icon svg').setAttribute('viewBox', '0 0 512 512');
-            }
             iconsList.appendChild(item);
         });
     </script>
