@@ -22,7 +22,23 @@ use the following to include an icon in your frontend
     <as24-icon type="t-online"></as24-icon>
     <as24-icon type="flag/de"></as24-icon>
 
-All the available icons are placed within the icons folder, using subfolder is possible too.
+All the available icons are placed within the icons folder, using subfolder is possible too.  
+If you want to use the icons without the showcar-ui library, you have to load a polyfill for custom elements first.  
+See <https://cdnjs.com/libraries/document-register-element>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js"></script>
+
+## How to create different sizes
+
+You can change the size of an svg by overriding css declarations.  
+Example:
+
+    as24-icon[type='navigation/car'] {
+        svg {
+            width: 42px;
+            height: 34px;
+        }
+    }
 
 ## How to contribute:
 
