@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Sodipodi ("http://www.sodipodi.com/") -->
-<svg viewBox="0 0 512 512" id="svg548" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="512" width="512" version="1" y="0" x="0" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
- <metadata id="metadata3758">
-  <rdf:RDF>
-   <cc:Work rdf:about="">
-    <dc:format>image/svg+xml</dc:format>
-    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-   </cc:Work>
-  </rdf:RDF>
- </metadata>
- <g id="flag" fill-rule="evenodd" stroke-width="1pt" transform="matrix(.68753 0 0 1.0318 .053975 -.71635)">
-  <rect id="rect171" transform="matrix(.74458 0 0 .74436 -.020050 .69434)" height="666.66" width="1e3" y="-.000031" x="0" fill="#c00"/>
-  <rect id="rect403" transform="matrix(.74458 0 0 .74436 -2.6314 102.2)" height="333.34" width="1000.2" y="30.288" x="3.4286" fill="#ff3"/>
- </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" height="480" width="640" version="1">
+  <path fill="#c60b1e" d="M0 0h640v480H0z"/>
+  <path fill="#ffc400" d="M0 120h640v240H0z"/>
 </svg>
