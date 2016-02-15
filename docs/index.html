@@ -6,6 +6,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js"></script>
     <script src="../dist/showcar-icons.min.js"></script>
     <style type="text/css">
+        as24-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+        }
+        as24-icon svg {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
         body {
             font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
             padding: 0 40px;
@@ -24,7 +34,7 @@
         #icons-list li:hover {
             background: #acacac;
         }
-        #icons-list li svg {
+        #icons-list li as24-icon {
             width: 80px;
             height: 80px;
         }

@@ -28,7 +28,11 @@ See <https://cdnjs.com/libraries/document-register-element>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js"></script>
 
-## How to create different sizes
+## Icon Sizing
+
+If you only use showcar-icons you need to define the size of the icons with your own css code.
+
+### How to create different sizes
 
 You can change the size of an svg by overriding css declarations.  
 Example:
@@ -38,6 +42,16 @@ Example:
             width: 42px;
             height: 34px;
         }
+    }
+
+### Sizing with ShowCarUI
+
+If you include showcar-ui, all as24-icons have a default size of 16px x 16px.
+In case you need a different size, just set it for the as24-icon, the svg will fit the size:
+
+    as24-icon[type='navigation/car'] {
+        width: 64px;
+        height: 64px;
     }
 
 ## How to contribute:
