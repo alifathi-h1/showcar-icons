@@ -10,7 +10,7 @@ Aws.use_bundled_cert!
 
 SERVICE = 'showcar-icons'
 REGION = ENV['REGION'] || 'eu-west-1'
-S3_ARTIFACTS_BUCKET = "as24-showcar-icons"
+S3_ARTIFACTS_BUCKET = (ENV['SANDBOX'] || "as24") + "-showcar-icons.aws.autoscout24.com"
 VERSION  = ENV['VERSION'] || ENV['GO_PIPELINE_LABEL']
 SANDBOX  = ENV['SANDBOX'] || ENV['GO_JOB_NAME'].nil? && `whoami`.strip
 STACK    = SANDBOX ? "#{SANDBOX}-#{SERVICE}" : SERVICE
