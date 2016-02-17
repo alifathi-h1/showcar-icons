@@ -1,25 +1,35 @@
-var iconNames = [
-    '@@iconNames'
-];
-
-var icons = {};
-
-iconNames.forEach(function(name) {
-    icons[name.toLowerCase()] = require('../icons/' + name + '.svg');
-});
-
-var proto = Object.create(HTMLElement.prototype);
-
-proto.createdCallback = function() {
-    this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
-};
-
-proto.attributeChangedCallback = function(attributeName, previousValue, value) {
-    if (attributeName === 'type') {
-        this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
+var isRegistered = function(name) {
+    var registered = document.createElement(name).constructor !== HTMLElement;
+    if (registered && window && window.console) {
+        window.console.warn('CustomElement "' + name + '" is already registered.');
     }
+    return registered;
 };
 
-document.registerElement('as24-icon', { prototype: proto });
+if (!isRegistered('as24-icon')) {
+    var iconNames = [
+        '@@iconNames'
+    ];
 
-window.showcarIconNames = iconNames;
+    var icons = {};
+
+    iconNames.forEach(function(name) {
+        icons[name.toLowerCase()] = require('../icons/' + name + '.svg');
+    });
+
+    var proto = Object.create(HTMLElement.prototype);
+
+    proto.createdCallback = function() {
+        this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
+    };
+
+    proto.attributeChangedCallback = function(attributeName, previousValue, value) {
+        if (attributeName === 'type') {
+            this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
+        }
+    };
+
+    document.registerElement('as24-icon', { prototype: proto });
+
+    window.showcarIconNames = iconNames;
+}
