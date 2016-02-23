@@ -54,6 +54,11 @@ In case you need a different size, just set it for the as24-icon, the svg will f
         height: 64px;
     }
 
+## Inline Icons
+
+We recommend to use inline icons if you need to include icons just on one single page.
+For further details see the [docs](./docs/index.html) and [CSS-Tricks](https://css-tricks.com/svg-symbol-good-choice-icons/)
+
 ## How to contribute:
 
 If you need some additional icons within showcar-icons just add them to the icons folder or another subfolder. Afterwards it is necessary to create the showcar-icons.min.js again.
