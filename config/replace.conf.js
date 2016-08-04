@@ -7,13 +7,10 @@ module.exports = (function() {
                 {
                     match: /\'@@iconNames'/,
                     replacement: function() {
-                        var files = grunt.file.expand("icons/**/*.svg");
-                        var resultFiles = [];
-                        files.forEach(function (file) {
-                            file = file.replace("icons/", "");
-                            resultFiles.push(file.substring(0, file.lastIndexOf(".svg")));
+                        var filesNames = grunt.file.expand("icons/**/*.svg").map(function(name) {
+                          return name.substr('icons/'.length).slice(0, -4);
                         });
-                        return "'" + resultFiles.join("',\n    '") + "'";
+                        return "'" + filesNames.join("',\n    '") + "'";
                     }
                 }
             ]

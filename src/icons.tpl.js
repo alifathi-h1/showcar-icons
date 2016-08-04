@@ -2,11 +2,12 @@ var iconNames = [
     '@@iconNames'
 ];
 
-var icons = {};
 
-iconNames.forEach(function(name) {
-    icons[name.toLowerCase()] = require('../icons/' + name + '.svg');
-});
+
+var icons = iconNames.reduce(function(res, name) {
+  res[name.toLowerCase()] = require('../icons/' + name + '.svg');
+  return res;
+}, {});
 
 var proto = Object.create(HTMLElement.prototype);
 
