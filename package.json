@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/showcar-icons.min.js",
   "scripts": {
-    "gh": "node ghpages.js"
+    "build": "node ./build.js ./icons/ ./dist/showcar-icons.js",
+    "example": "rollup ./test/test.src.js --output ./test/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,18 +25,10 @@
     "url": "https://github.com/AutoScout24/showcar-icons/issues"
   },
   "devDependencies": {
-    "file-loader": "^0.9.0",
-    "glob": "^7.0.5",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-replace": "^1.0.1",
-    "grunt-webpack": "^1.0.11",
-    "load-grunt-tasks": "^3.5.0",
-    "matchdep": "^1.0.1",
-    "raw-loader": "^0.5.1",
-    "svgo": "^0.6.6",
-    "svgo-loader": "^1.1.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+    "q": "^1.4.1",
+    "ramda": "^0.22.0",
+    "recursive-readdir": "^2.0.0",
+    "rollup": "^0.34.3",
+    "svgo": "^0.6.6"
   }
 }

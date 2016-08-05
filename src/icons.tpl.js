@@ -1,32 +1,16 @@
-var iconNames = [
-    '@@iconNames'
-];
+export function @@iconName() {
+  var proto = Object.create(HTMLElement.prototype);
 
+  proto.createdCallback = function() {
+      this.innerHTML = '@@iconText';
+  };
 
-
-var icons = iconNames.reduce(function(res, name) {
-  res[name.toLowerCase()] = require('../icons/' + name + '.svg');
-  return res;
-}, {});
-
-var proto = Object.create(HTMLElement.prototype);
-
-proto.createdCallback = function() {
-    this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
-};
-
-proto.attributeChangedCallback = function(attributeName, previousValue, value) {
-    if (attributeName === 'type') {
-        this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
-    }
-};
-
-try {
-    document.registerElement('as24-icon', { prototype: proto });
-} catch (e) {
-    if (window && window.console) {
-        window.console.warn('Failed to register CustomElement "as24-icon".', e);
-    }
+  try {
+      document.registerElement('as24-icon-@@iconName', { prototype: proto });
+  } catch (e) {
+      if (window && window.console) {
+          window.console.warn('Failed to register CustomElement "as24-icon".', e);
+      }
+  }
+  return name;
 }
-
-window.showcarIconNames = iconNames;
