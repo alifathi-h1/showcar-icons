@@ -15,6 +15,8 @@ var thenMap = R.curry(function(f, p) { return p.then(R.map(f)); });
 var spread = R.curry(function(f, p) { return p.spread(f); });
 
 var recursiveReadDir = R.curryN(2, Q.nfcall)(recursiveDir);
+
+/// optimise :: SVGText -> SVGText
 var optimise = function(svg) {
   return Q.Promise(function(res, rej) {
      svgo.optimize(svg, function(result) {
@@ -26,12 +28,16 @@ var optimise = function(svg) {
      });
   });
 }
+
+
 var readFile = R.flip(R.curryN(2, Q.nfcall)(fs.readFile))({encoding: 'utf-8'});
 var writeFile = R.curry(function(fileName, content) {
   mkdirp(path.dirname(fileName));
   return Q.nfcall(fs.writeFile(fileName, content, 'utf8'));
 });
+
 var joinWithDirname = R.curryN(2, path.join)(__dirname);
+
 var relativeFileName = R.curry(function(sourcePath, fileName) {
   return fileName.substr(sourcePath.length).slice(0,-4);
 });
@@ -52,13 +58,14 @@ var buildFilesList = R.compose(recursiveReadDir, joinWithDirname);
 var buildSVGList = R.compose(then(Q.all), thenMap(optimise), then(Q.all), thenMap(readFile));
 
 /// buildFileNamesList :: Promise([Paths]) -> Promise([FileNames])
-var buildFileNamesList = thenMap(R.compose(R.replace(/[^a-zA-Z0-9]/g, '_'), relativeFileName(joinWithDirname(sourceDir))));
+var buildFileNamesList = thenMap(R.compose(R.replace(/[^a-zA-Z0-9]/g, ''), relativeFileName(joinWithDirname(sourceDir))));
 
 /// filesListToNamesAndSVGs :: Promise([Paths]) -> Promise([ [FileNames] [SVGStrings] ])
 var filesListToNamesAndSVGs = R.compose(Q.all, R.ap([buildFileNamesList, buildSVGList]), R.of);
 
 var program = R.compose(
   then(writeFile(resultFile)),
+  then(R.concat('import { regIcon } from "../src/reg.js";\n\n')),
   then(R.join('\n')),
   spread(applyTemplate),
   filesListToNamesAndSVGs,

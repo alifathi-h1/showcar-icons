@@ -1,4 +1,4 @@
-import { appIcon, android } from "../dist/showcar-icons"
+import { android, emissionbadge2 } from "../dist/showcar-icons";
 
-appIcon();
-android();
+android(window);
+emissionbadge2(window);

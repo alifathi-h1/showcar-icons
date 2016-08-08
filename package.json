@@ -5,7 +5,7 @@
   "main": "dist/showcar-icons.min.js",
   "scripts": {
     "build": "node ./build.js ./icons/ ./dist/showcar-icons.js",
-    "example": "rollup ./test/test.src.js --output ./test/index.js"
+    "example": "rollup -c rollup.config.js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +26,9 @@
   },
   "devDependencies": {
     "q": "^1.4.1",
-    "ramda": "^0.22.0",
+    "ramda": "^0.22.1",
     "recursive-readdir": "^2.0.0",
-    "rollup": "^0.34.3",
+    "rollup": "^0.34.7",
     "svgo": "^0.6.6"
   }
 }
