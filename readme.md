@@ -1,3 +1,5 @@
+![](http://img.badgesize.io/AutoScout24/showcar-icons/master/dist/showcar-icons.min.js?label=js_size_gzip&compression=gzip)
+
 # Showcar-icons
 
 This module provides custom elements for simple inclusion of icons in your frontend project.
