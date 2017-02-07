@@ -20,7 +20,7 @@ notifications:
   email: false
 
 before_install:
-  # todo
+  - openssl aes-256-cbc -K $encrypted_bd2fe598737f_key -iv $encrypted_bd2fe598737f_iv -in travis-release-key.enc -out release_key -d
 
 script:
   - npm run build
