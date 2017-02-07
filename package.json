@@ -1,41 +1,42 @@
 {
-  "name": "showcar-icons",
-  "version": "0.4.0",
-  "description": "",
-  "main": "dist/showcar-icons.min.js",
-  "scripts": {
-    "gh": "node ghpages.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AutoScout24/showcar-icons.git"
-  },
-  "keywords": [
-    "icon",
-    "icons",
-    "web components",
-    "custom elements",
-    "polymer"
-  ],
-  "author": "AutoScout24",
-  "license": "MIT",
-  "private": true,
-  "bugs": {
-    "url": "https://github.com/AutoScout24/showcar-icons/issues"
-  },
-  "devDependencies": {
-    "file-loader": "^0.9.0",
-    "glob": "^7.0.5",
-    "grunt": "^1.0.1",
-    "grunt-cli": "^1.2.0",
-    "grunt-replace": "^1.0.1",
-    "grunt-webpack": "^1.0.11",
-    "load-grunt-tasks": "^3.5.0",
-    "matchdep": "^1.0.1",
-    "raw-loader": "^0.5.1",
-    "svgo": "^0.6.6",
-    "svgo-loader": "^1.1.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
-  }
+    "name": "showcar-icons",
+    "version": "0.4.0",
+    "description": "",
+    "main": "dist/showcar-icons.min.js",
+    "scripts": {
+        "gh": "node ghpages.js",
+        "build": "grunt build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/AutoScout24/showcar-icons.git"
+    },
+    "keywords": [
+        "icon",
+        "icons",
+        "web components",
+        "custom elements",
+        "polymer"
+    ],
+    "author": "AutoScout24",
+    "license": "MIT",
+    "private": true,
+    "bugs": {
+        "url": "https://github.com/AutoScout24/showcar-icons/issues"
+    },
+    "devDependencies": {
+        "file-loader": "^0.9.0",
+        "glob": "^7.0.5",
+        "grunt": "^1.0.1",
+        "grunt-cli": "^1.2.0",
+        "grunt-replace": "^1.0.1",
+        "grunt-webpack": "^1.0.11",
+        "load-grunt-tasks": "^3.5.0",
+        "matchdep": "^1.0.1",
+        "raw-loader": "^0.5.1",
+        "svgo": "^0.6.6",
+        "svgo-loader": "^1.1.0",
+        "webpack": "^1.13.1",
+        "webpack-dev-server": "^1.14.1"
+    }
 }
