@@ -18,11 +18,10 @@ git config push.default simple
 git checkout $TARGET_BRANCH
 
 cp -r ../dist .
-cp -r ../src .
 cp ../package.json .
-cp ../History.md .
+# cp -r ../src .
+# cp ../History.md .
 
 git add . -A
 git commit -am "Release"
 git push origin $TARGET_BRANCH
-
