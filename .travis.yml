@@ -12,9 +12,8 @@ env:
     - secure: "W1+I2TDqoF6fosZQ1c4uOyfCTBGSbsAsQXVy4AxazC31Ldd8udG2yk8vlmDEGsR/ZIw0rb4Mu6Plrnb/lpFdbHzihMEXpPIIcohj6ol06Bqoxtu1UO1gBFc2ad9VbZ6NNVyNoosSNyYY9a/luQmO7ov+mdJfFu+Iizr6awHC/WsPO+ityFk4y/TwnNQw74Z3mQGBSH2PGed4LsrMJZDKL4HMsiSm/L394h2Y+WoFnXLe7eeCyXITS69Na+InVJZmJ+S7yeMXCsL+UtdIHKk6efS26XK05eiJ//AdRnNbVEC4D0BdmDKzLp3MGI4v8FJWy3BSLs8OI6YHer0Z05geA4qV2JVurvjlYMYEeXPgnVMmsMpOAu83yCANqYy7i8IyutUTpmWqH77Pai7HP3IcX5Xxc1K4YaaU6AyZOAam/bqpO3a86O7KHDadtshkaG95WdLAom7RtGBT26BYNLQy40hCk90PyGXCXfjzFmDzXXnIzGoZbsHSQDyAV0pxwrcdBVHEyZaw+J/8sjjhJ98hj0ZQzT7u0jLgh2YXWQAE4b7+8uWiKVpbIfK1/K7wae2NwntqSPM/AIMavthNygKDA4U/9QM8ZwWD3es+vlGtDVj7AFaSJh41S2mStirKp6v8apigFZUebldjOYB56s2MRiJiZaf5x4gWBPfpdA50+Ak="
 
 branches:
-  except:
-    - release
-    - meta
+  only:
+  - master
 
 notifications:
   email: false
