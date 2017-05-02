@@ -6,7 +6,7 @@ This module provides custom elements for simple inclusion of icons in your front
 
 ## Installation:
 
-To install showcar-icons within your project use bower.
+To install showcar-icons within your project use npm.
 
 ```bash
 $ npm i --save showcar-icons
