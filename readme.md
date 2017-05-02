@@ -9,7 +9,7 @@ This module provides custom elements for simple inclusion of icons in your front
 To install showcar-icons within your project use bower.
 
 ```bash
-$ bower install --save git@github.com:AutoScout24/showcar-icons.git
+$ npm i --save showcar-icons
 ```
 
 ## How to include:
