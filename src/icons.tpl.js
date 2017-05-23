@@ -11,7 +11,7 @@ var icons = iconNames.reduce(function(res, name) {
 
 var proto = Object.create(HTMLElement.prototype);
 
-proto.createdCallback = function() {
+proto.attachedCallback = function() {
     this.innerHTML = icons[('' + this.getAttribute('type')).toLowerCase()];
 };
 
