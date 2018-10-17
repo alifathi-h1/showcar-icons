@@ -11,7 +11,7 @@ ssh-add release_key
 mkdir temp-git
 cd temp-git
 
-git clone -b $TARGET_BRANCH --single-branch "git@github.com:AutoScout24/showcar-icons.git" .
+git clone -b $TARGET_BRANCH --single-branch "git@github.com:Scout24/showcar-icons.git" .
 git config user.name "Travis CI"
 git config user.email "${GIT_EMAIL}"
 git config push.default simple
