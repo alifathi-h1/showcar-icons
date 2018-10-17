@@ -13,7 +13,7 @@ env:
 
 branches:
   only:
-  - master
+    - master
 
 notifications:
   email: false
@@ -22,10 +22,8 @@ before_install:
   - openssl aes-256-cbc -K $encrypted_bd2fe598737f_key -iv $encrypted_bd2fe598737f_iv -in travis-release-key.enc -out release_key -d
 
 script:
-  - npm run build
+  # - npm run build
 
 after_success:
   # only run for master branch, we don't want to release PRs and other branches
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "true" ] && [ "$TRAVIS_BRANCH" == "master" ]; then bash ./travis_release.sh; fi'
-
-
+  # - 'if [ "$TRAVIS_PULL_REQUEST" != "true" ] && [ "$TRAVIS_BRANCH" == "master" ]; then bash ./travis_release.sh; fi'
