@@ -21,11 +21,7 @@ upload_to_s3() {
 
     aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read
 
-    # aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE}/${BRANCH}/latest/" --recursive --exclude "*.html" --cache-control "max-age=2592000" --acl public-read
-
-    # aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE}/${BRANCH}/latest/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read
-
-    # aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE}/" --recursive --exclude "*" --include "*-fragment.html" --cache-control "max-age=300" --acl public-read
+    aws --region "eu-west-1" s3 cp dist "s3://as24-assets-eu-west-1/${SERVICE}/" --recursive --exclude "*" --include "*-fragment.html" --cache-control "max-age=300" --acl public-read
 }
 
 prepare_assets

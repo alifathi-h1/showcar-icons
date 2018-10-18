@@ -42,7 +42,7 @@ pipeline {
       steps {
         // unstash 'output-dist'
         sh 'echo "DeployDev..."'
-        // sh './deploy.sh'
+        sh './deploy.sh'
       }
     }
 
