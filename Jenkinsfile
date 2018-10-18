@@ -9,6 +9,7 @@ pipeline {
 
   environment {
     AWS_DEFAULT_REGION='eu-west-1'
+    SERVICE="showcar-icons"
   }
 
   stages {
@@ -23,7 +24,7 @@ pipeline {
       steps {
         sh 'echo "Build some stuff..."'
         sh './build.sh'
-        // stash includes: 'dist/**/*', name: 'output-dist'
+        stash includes: 'dist/**/*', name: 'output-dist'
       }
     }
 
@@ -40,8 +41,8 @@ pipeline {
       agent { node { label 'deploy-as24dev-node' } }
 
       steps {
-        // unstash 'output-dist'
         sh 'echo "DeployDev..."'
+        unstash 'output-dist'
         sh './deploy.sh'
       }
     }
@@ -60,7 +61,15 @@ pipeline {
 
       steps {
         sh 'echo "DeployProd..."'
+        unstash 'output-dist'
+        sh './deploy.sh'
       }
+    }
+  }
+
+  post {
+    failure {
+        echo 'Pipeline failed 💣'
     }
   }
 }
