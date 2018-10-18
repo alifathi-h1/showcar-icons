@@ -46,21 +46,21 @@ pipeline {
       }
     }
 
-    // stage('DeployProd') {
-    //   when {
-    //     beforeAgent true
-    //     branch 'master'
-    //   }
+    stage('DeployProd') {
+      when {
+        beforeAgent true
+        branch 'master'
+      }
 
-    //   environment {
-    //     BRANCH="master"
-    //   }
+      environment {
+        BRANCH="master"
+      }
 
-    //   agent { node { label 'deploy-as24dev-node' } }
+      agent { node { label 'deploy-as24dev-node' } }
 
-    //   steps {
-    //     sh 'echo "DeployProd..."'
-    //   }
-    // }
+      steps {
+        sh 'echo "DeployProd..."'
+      }
+    }
   }
 }
