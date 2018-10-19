@@ -23,7 +23,7 @@ pipeline {
 
       steps {
         sh 'echo "Build some stuff..."'
-        sh './build.sh'
+        sh './deploy/build.sh'
         stash includes: 'dist/**/*', name: 'output-dist'
       }
     }
@@ -43,7 +43,7 @@ pipeline {
       steps {
         sh 'echo "DeployDev..."'
         unstash 'output-dist'
-        sh './deploy.sh'
+        sh './deploy/deploy.sh'
       }
     }
 
@@ -62,7 +62,7 @@ pipeline {
       steps {
         sh 'echo "DeployProd..."'
         unstash 'output-dist'
-        sh './deploy.sh'
+        sh './deploy/deploy.sh'
       }
     }
   }
@@ -70,6 +70,7 @@ pipeline {
   post {
     failure {
         echo 'Pipeline failed 💣'
+        slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed."
     }
   }
 }
