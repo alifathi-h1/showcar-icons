@@ -1,9 +1,20 @@
-service: showcar-icons
-team: acquisition
+type: library
+id: showcar-icons
+name: showcar-icons
 vertical: as24
-segment: cxp
-owner: '#AS24-acquisition-cxp-ds@scout24.com'
-repository_url: https://github.com/Scout24/showcar-icons.git
+owners:
+- '#AS24-acquisition-cxp-ds@scout24.com'
+availability: false
+integrity: false
+confidentiality: public
+product: showcar
 links:
-  dashboard:
-  - https://acquisition.fizz.cloud.scout24.com/job/showcar-icons
+- type: repository
+  title: Git Repository
+  address: https://github.com/Scout24/showcar-icons
+- type: documentation
+  title: Readme
+  address: https://github.com/Scout24/showcar-icons/blob/master/readme.md
+- type: runbook
+  title: Fizz Job
+  address: https://acquisition.fizz.cloud.scout24.com/job/showcar-icons
