@@ -47,21 +47,6 @@ pipeline {
       }
     }
 
-    /* Approval step for the subsequent stage 
-    It's a separate stage to not block an agent */
-    stage('DeployProd-Approval') {
-      agent none
-
-      when {
-        beforeAgent true
-        branch 'master'
-      }
-
-      steps {
-        input message: "Approve build to be propagated to production?"
-      }
-    }
-
     stage('DeployProd') {
       when {
         beforeAgent true
