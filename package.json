@@ -1,6 +1,6 @@
 {
   "name": "showcar-icons",
-  "version": "0.6.5",
+  "version": "0.7.0",
   "description": "Showcar Icons for Showcar projects",
   "main": "dist/showcar-icons.min.js",
   "scripts": {
