@@ -1,121 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title></title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js"></script>
     <script src="../dist/showcar-icons.min.js"></script>
     <style type="text/css">
-        as24-icon {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-        }
-        as24-icon svg {
-            max-width: 100%;
-            max-height: 100%;
-        }
+      as24-icon {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+      }
+      as24-icon svg {
+        max-width: 100%;
+        max-height: 100%;
+      }
 
-        body {
-            font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
-            padding: 0 40px;
-        }
-        .icons-list:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        .icons-list li {
-            padding: 10px;
-            float: left;
-            background: #f4f4f4;
-            border: 1px solid #fff;
-            width: 120px;
-            height: 160px;
-            list-style: none;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .icons-list li:hover {
-            background: #acacac;
-        }
-        .icons-list li as24-icon {
-            width: 80px;
-            height: 80px;
-        }
-        .icons-list li p {
-            height: 40px;
-        }
+      body {
+        font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+        padding: 0 40px;
+      }
+      .icons-list:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .icons-list li {
+        padding: 10px;
+        float: left;
+        background: #f4f4f4;
+        border: 1px solid #fff;
+        width: 120px;
+        height: 160px;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .icons-list li:hover {
+        background: #acacac;
+      }
+      .icons-list li as24-icon {
+        width: 80px;
+        height: 80px;
+      }
+      .icons-list li p {
+        height: 40px;
+      }
 
-        #inline-icon-example {
-            width: 80px;
-            height: 80px;
-            fill: #FF0000;
-        }
-        #inline-icon-example:hover {
-            fill: #9f0000;
-        }
+      #inline-icon-example {
+        width: 80px;
+        height: 80px;
+        fill: #ff0000;
+      }
+      #inline-icon-example:hover {
+        fill: #9f0000;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Showcar-Icons</h1>
     <p>This page contains a list of all currently available icons inside the showcar-icons bundle.</p>
     <p>To use a specific item use the following code:</p>
     <code>
-        &lt;as24-icon type="[[icon-name]]"&gt;&lt;/as24-icon&gt;
+      &lt;as24-icon type="[[icon-name]]"&gt;&lt;/as24-icon&gt;
     </code>
-
-    <h2>Readme</h2>
-    <p>
-        Read the <a href="../readme.md">readme.md</a> for more information.
-    </p>
 
     <h2>Icon Names</h2>
     <p>The following icon names are currently available:</p>
     <ul id="as24-icons-list" class="icons-list"></ul>
 
-
     <h2>Inline Icons</h2>
     <p>
-        In case you need an icon just once on the whole website, it would be the better, to use
-        inline icons instead of delivering your once-used-icon on every page with showcar-icons.
+      In case you need an icon just once on the whole website, it would be the better, to use inline icons instead of
+      delivering your once-used-icon on every page with showcar-icons.
     </p>
     <p>You can size and color the icon with simple css - see this pages css</p>
     <p>
-        If you want to have more information about the implementation have a look at
-        <a href="https://css-tricks.com/svg-symbol-good-choice-icons/">
-            SVG `symbol` a Good Choice for Icons
-        </a>
+      If you want to have more information about the implementation have a look at
+      <a href="https://css-tricks.com/svg-symbol-good-choice-icons/">
+        SVG `symbol` a Good Choice for Icons
+      </a>
     </p>
     <div class="inline-icon-example">
-        <!-- hide the svg either with a .hidden class or manually -->
-        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="as24-heart" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.98 4.888c.568-.586 1.095-1.173 1.667-1.713 1.034-.978 2.29-1.436 3.702-1.523 1.204-.074 2.37.06 3.462.587 1.686.814 2.665 2.188 3.034 4 .428 2.09-.06 4.015-1.135 5.82-.61 1.03-1.422 1.892-2.26 2.735-1.506 1.517-3.006 3.04-4.507 4.563-1.15 1.167-2.295 2.338-3.445 3.506-.367.373-.626.374-.99.004-2.144-2.172-4.287-4.344-6.425-6.52-.887-.9-1.79-1.79-2.634-2.728C1.27 12.313.435 10.806.13 9.053-.195 7.165.058 5.38 1.24 3.813c.932-1.237 2.22-1.88 3.73-2.106.957-.143 1.912-.102 2.857.11 1.274.288 2.28 1.01 3.15 1.952.342.37.675.75 1.004 1.118z" />
-            </symbol>
+      <!-- hide the svg either with a .hidden class or manually -->
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="as24-heart" viewBox="0 0 24 24">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.98 4.888c.568-.586 1.095-1.173 1.667-1.713 1.034-.978 2.29-1.436 3.702-1.523 1.204-.074 2.37.06 3.462.587 1.686.814 2.665 2.188 3.034 4 .428 2.09-.06 4.015-1.135 5.82-.61 1.03-1.422 1.892-2.26 2.735-1.506 1.517-3.006 3.04-4.507 4.563-1.15 1.167-2.295 2.338-3.445 3.506-.367.373-.626.374-.99.004-2.144-2.172-4.287-4.344-6.425-6.52-.887-.9-1.79-1.79-2.634-2.728C1.27 12.313.435 10.806.13 9.053-.195 7.165.058 5.38 1.24 3.813c.932-1.237 2.22-1.88 3.73-2.106.957-.143 1.912-.102 2.857.11 1.274.288 2.28 1.01 3.15 1.952.342.37.675.75 1.004 1.118z"
+          />
+        </symbol>
 
-            <!-- other symbols go here -->
-            <symbol id="next-icon" viewBox="0 26 100 48">
-                <!-- <path>s and whatever other shapes in here -->
-            </symbol>
-        </svg>
-        <ul class="icons-list">
-            <li>
-                <svg id="inline-icon-example">
-                    <use xlink:href="#as24-heart" />
-                </svg>
-                <p>inline icon</p>
-            </li>
-        </ul>
+        <!-- other symbols go here -->
+        <symbol id="next-icon" viewBox="0 26 100 48">
+          <!-- <path>s and whatever other shapes in here -->
+        </symbol>
+      </svg>
+      <ul class="icons-list">
+        <li>
+          <svg id="inline-icon-example">
+            <use xlink:href="#as24-heart" />
+          </svg>
+          <p>inline icon</p>
+        </li>
+      </ul>
     </div>
 
     <script type="text/javascript">
-        var iconsList = document.querySelector('#as24-icons-list');
-        window.showcarIconNames.forEach(function(name) {
-            var item = document.createElement('li');
-            item.innerHTML = '<as24-icon type="' + name + '"></as24-icon><p>' + name + '</p>';
-            iconsList.appendChild(item);
-        });
+      var iconsList = document.querySelector("#as24-icons-list");
+      window.showcarIconNames.forEach(function(name) {
+        var item = document.createElement("li");
+        item.innerHTML = '<as24-icon type="' + name + '"></as24-icon><p>' + name + "</p>";
+        iconsList.appendChild(item);
+      });
     </script>
-</body>
+  </body>
 </html>

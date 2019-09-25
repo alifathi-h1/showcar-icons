@@ -1,4 +1,4 @@
-![](http://img.badgesize.io/AutoScout24/showcar-icons/master/dist/showcar-icons.min.js?label=js_size_gzip&compression=gzip)
+![](http://img.badgesize.io/Scout24/showcar-icons/master/dist/showcar-icons.min.js?label=js_size_gzip&compression=gzip)
 
 # Showcar-icons
 
@@ -17,7 +17,7 @@ $ npm i --save showcar-icons
 To make the custom elements available within you frontend, it is necessary to include some javascript (depending on your directory structure)
 
 ```javascript
-require('showcar-icons/dist/showcar-icons.min.js');
+require("showcar-icons/dist/showcar-icons.min.js");
 ```
 
 ## How to use:
@@ -25,8 +25,7 @@ require('showcar-icons/dist/showcar-icons.min.js');
 use the following to include an icon in your frontend:
 
 ```html
-<as24-icon type="t-online"></as24-icon>
-<as24-icon type="flag/de"></as24-icon>
+<as24-icon type="t-online"></as24-icon> <as24-icon type="flag/de"></as24-icon>
 ```
 
 All the available icons are placed within the icons folder, using subfolder is possible too.  
@@ -47,11 +46,11 @@ You can change the size of an svg by overriding css declarations.
 Example:
 
 ```css
-as24-icon[type='navigation/car'] {
-    svg {
-        width: 42px;
-        height: 34px;
-    }
+as24-icon[type="navigation/car"] {
+  svg {
+    width: 42px;
+    height: 34px;
+  }
 }
 ```
 
@@ -61,9 +60,9 @@ If you include showcar-ui, all as24-icons have a default size of 16px x 16px.
 In case you need a different size, just set it for the as24-icon, the svg will fit the size:
 
 ```css
-as24-icon[type='navigation/car'] {
-    width: 64px;
-    height: 64px;
+as24-icon[type="navigation/car"] {
+  width: 64px;
+  height: 64px;
 }
 ```
 
@@ -76,14 +75,16 @@ For further details see the [docs](./docs/index.html) and [CSS-Tricks](https://c
 
 If you need some additional icons within showcar-icons just add them to the icons folder or another subfolder. Afterwards it is necessary to create the `showcar-icons.min.js` again.
 
-Rebuild showcar-icons.min.js with grunt:
+```bash
+$ yarn build
+```
+
+To test your changes run, it will open docs page on port 8080
 
 ```bash
-$ grunt
+$ yarn start
 ```
 
 ## License
 
 MIT License
-
-
