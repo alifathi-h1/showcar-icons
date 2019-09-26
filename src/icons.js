@@ -9,13 +9,22 @@ importAll(require.context("../icons", true, /\.svg$/));
 
 const proto = Object.create(HTMLElement.prototype);
 
+const inlineIconIntoElement = (el) => {
+  const type = el.getAttribute("type");
+  try {
+    el.innerHTML = icons[type.toLowerCase()].default;
+  } catch(e) {
+    console.error('Could not create icon with type', type, e);
+  }
+};
+
 proto.attachedCallback = function() {
-  this.innerHTML = icons[("" + this.getAttribute("type")).toLowerCase()].default;
+  inlineIconIntoElement(this);
 };
 
 proto.attributeChangedCallback = function(attributeName, previousValue, value) {
   if (attributeName === "type") {
-    this.innerHTML = icons[("" + this.getAttribute("type")).toLowerCase()].default;
+    inlineIconIntoElement(this);
   }
 };
 
