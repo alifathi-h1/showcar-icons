@@ -12,7 +12,9 @@ const proto = Object.create(HTMLElement.prototype);
 const inlineIconIntoElement = (el) => {
   const type = el.getAttribute("type");
   try {
-    el.innerHTML = icons[type.toLowerCase()].default;
+    if (type) {
+      el.innerHTML = icons[type.toLowerCase()].default;
+    }
   } catch(e) {
     console.error('Could not create icon with type', type, e);
   }
