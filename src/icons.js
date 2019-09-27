@@ -1,5 +1,5 @@
-var icons = {};
-var regex = /^\.\/([^\.]+)\.svg$/gm;
+const icons = {};
+const regex = /^\.\/([^\.]+)\.svg$/gm;
 
 function importAll(r) {
   r.keys().forEach(key => (icons[key.toLowerCase().replace(regex, "$1")] = r(key)));
@@ -7,10 +7,10 @@ function importAll(r) {
 
 importAll(require.context("../icons", true, /\.svg$/));
 
-var proto = Object.create(HTMLElement.prototype);
+const proto = Object.create(HTMLElement.prototype);
 
-function inlineIconIntoElement(el) {
-  var type = el.getAttribute("type");
+const inlineIconIntoElement = (el) => {
+  const type = el.getAttribute("type");
   try {
     if (type) {
       el.innerHTML = icons[type.toLowerCase()].default;
