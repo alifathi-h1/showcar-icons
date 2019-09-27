@@ -2,7 +2,9 @@ var icons = {};
 var regex = /^\.\/([^\.]+)\.svg$/gm;
 
 function importAll(r) {
-  r.keys().forEach(key => (icons[key.toLowerCase().replace(regex, "$1")] = r(key)));
+  r.keys().forEach(function(key) {
+    icons[key.toLowerCase().replace(regex, "$1")] = r(key); 
+  });
 }
 
 importAll(require.context("../icons", true, /\.svg$/));
