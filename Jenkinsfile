@@ -14,11 +14,6 @@ pipeline {
 
   stages {
     stage('Build') {
-      when {
-        beforeAgent true
-        branch 'master'
-      }
-
       agent { node { label 'deploy-as24dev-node' } }
 
       steps {
@@ -31,7 +26,9 @@ pipeline {
     stage('DeployDev') {
       when {
         beforeAgent true
-        branch 'master'
+        not {
+          branch 'master'
+        }
       }
 
       environment {
