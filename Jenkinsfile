@@ -14,10 +14,6 @@ pipeline {
 
   stages {
     stage('Build') {
-      when {
-        beforeAgent true
-      }
-
       agent { node { label 'deploy-as24dev-node' } }
 
       steps {
