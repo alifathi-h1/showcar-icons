@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
-<rect x="-2.2" y="6.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.2215 7.7782)" width="20" height="2"/>
-<rect x="-2.2" y="6.8" transform="matrix(0.7071 0.7071 -0.7071 0.7071 7.7786 -3.2215)" width="20" height="2"/>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+<path class="st2" d="M13.4,12l7.3-7.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0L12,10.6L4.7,3.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l7.3,7.3
+	l-7.3,7.3c-0.4,0.4-0.4,1,0,1.4C3.5,20.9,3.7,21,4,21s0.5-0.1,0.7-0.3l7.3-7.3l7.3,7.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3
+	c0.4-0.4,0.4-1,0-1.4L13.4,12z"/>
 </svg>
