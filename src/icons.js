@@ -13,15 +13,6 @@ const inlineIconIntoElement = (el) => {
   const type = el.getAttribute("type");
   try {
     if (type) {
-      const metrics = {
-        type: "increment",
-        name: "showcar-icons",
-        tags: [`icon:${type}`],
-        value: 1,
-      }
-
-      navigator.sendBeacon('/frontend-metrics/timeseries', JSON.stringify(metrics))
-
       el.innerHTML = icons[type.toLowerCase()].default;
     }
   } catch(e) {
