@@ -17,15 +17,15 @@ fail() {
 upload_to_s3() {
     echo "Uploading assets to S3"
 
-    aws --region "eu-west-1" s3 cp dist "s3://act-showcar-assets/${SERVICE}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*.html" --cache-control "max-age=2592000" --acl public-read
+    aws --region "eu-west-1" s3 cp dist "s3://as24-showcar-assets/${SERVICE}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*.html" --cache-control "max-age=2592000" --acl public-read
 
-    aws --region "eu-west-1" s3 cp dist "s3://act-showcar-assets/${SERVICE}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read
+    aws --region "eu-west-1" s3 cp dist "s3://as24-showcar-assets/${SERVICE}/${BRANCH}/${COMMIT_HASH}/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read
 
-    aws --region "eu-west-1" s3 cp dist "s3://act-showcar-assets/${SERVICE}/${BRANCH}/latest/" --recursive --exclude "*.html" --cache-control "max-age=2592000" --acl public-read
+    aws --region "eu-west-1" s3 cp dist "s3://as24-showcar-assets/${SERVICE}/${BRANCH}/latest/" --recursive --exclude "*.html" --cache-control "max-age=2592000" --acl public-read
     
-    aws --region "eu-west-1" s3 cp dist "s3://act-showcar-assets/${SERVICE}/${BRANCH}/latest/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read
+    aws --region "eu-west-1" s3 cp dist "s3://as24-showcar-assets/${SERVICE}/${BRANCH}/latest/" --recursive --exclude "*" --include "*.html" --cache-control "max-age=300" --acl public-read
 
-    aws --region "eu-west-1" s3 cp dist "s3://act-showcar-assets/${SERVICE}/" --recursive --exclude "*" --include "*-fragment.html" --cache-control "max-age=300" --acl public-read
+    aws --region "eu-west-1" s3 cp dist "s3://as24-showcar-assets/${SERVICE}/" --recursive --exclude "*" --include "*-fragment.html" --cache-control "max-age=300" --acl public-read
 }
 
 prepare_assets
