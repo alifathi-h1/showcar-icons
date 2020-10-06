@@ -14,7 +14,7 @@ pipeline {
 
   stages {
     stage('Build') {
-      agent { node { label 'deploy-as24assets-node' } }
+      agent { node { label 'build-as24assets' } }
 
       steps {
         sh 'echo "Build some stuff..."'
@@ -33,7 +33,7 @@ pipeline {
         BRANCH="master"
       }
 
-      agent { node { label 'deploy-as24assets-node' } }
+      agent { node { label 'deploy-as24assets' } }
 
       steps {
         sh 'echo "DeployProd..."'
