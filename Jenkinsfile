@@ -14,33 +14,12 @@ pipeline {
 
   stages {
     stage('Build') {
-      agent { node { label 'deploy-as24dev-node' } }
+      agent { node { label 'build-as24assets' } }
 
       steps {
         sh 'echo "Build some stuff..."'
         sh './deploy/build.sh'
         stash includes: 'dist/**/*', name: 'output-dist'
-      }
-    }
-
-    stage('DeployDev') {
-      when {
-        beforeAgent true
-        not {
-          branch 'master'
-        }
-      }
-
-      environment {
-        BRANCH="develop"
-      }
-
-      agent { node { label 'deploy-as24dev-node' } }
-
-      steps {
-        sh 'echo "DeployDev..."'
-        unstash 'output-dist'
-        sh './deploy/deploy.sh'
       }
     }
 
@@ -54,7 +33,7 @@ pipeline {
         BRANCH="master"
       }
 
-      agent { node { label 'deploy-as24dev-node' } }
+      agent { node { label 'deploy-as24assets' } }
 
       steps {
         sh 'echo "DeployProd..."'
@@ -67,7 +46,7 @@ pipeline {
   post {
     failure {
         echo 'Pipeline failed 💣'
-        slackSend channel: 'as24_acq_cxp_fizz', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
+        slackSend channel: 'ug-activation-alerts', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
     }
   }
 }
