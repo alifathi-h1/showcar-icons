@@ -14,11 +14,31 @@ const inlineIconIntoElement = (el) => {
   try {
     if (type) {
       el.innerHTML = icons[type.toLowerCase()].default;
+      adjustClipPathsIfNecessary(el)
     }
   } catch(e) {
     console.error('Could not create icon with type', type, e);
   }
 };
+
+const adjustClipPathsIfNecessary = (el) => {
+  const cpEls = el.querySelectorAll('clippath[id]')
+  cpEls.forEach((cp) => {
+    const id = cp.getAttribute('id');
+    const path = el.querySelector(`[clip-path="url(#${id})"]`)
+    if (path) {
+      const randomId = createRandomId()
+      cp.setAttribute('id', randomId)
+      path.setAttribute('clip-path', `url(#${randomId})`)
+    }
+  })
+}
+
+const createRandomId = () => {
+  return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+}
 
 proto.attachedCallback = function() {
   inlineIconIntoElement(this);
