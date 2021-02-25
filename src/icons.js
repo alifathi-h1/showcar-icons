@@ -22,7 +22,7 @@ const inlineIconIntoElement = (el) => {
 };
 
 const adjustClipPathsIfNecessary = (el) => {
-  const cpEls = el.querySelectorAll('clippath[id]')
+  const cpEls = el.querySelectorAll('clipPath[id]')
   cpEls.forEach((cp) => {
     const id = cp.getAttribute('id');
     const path = el.querySelector(`[clip-path="url(#${id})"]`)
