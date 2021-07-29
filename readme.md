@@ -25,8 +25,10 @@ require("showcar-icons/dist/showcar-icons.min.js");
 use the following to include an icon in your frontend:
 
 ```html
-<as24-icon type="t-online"></as24-icon> <as24-icon type="flag/de"></as24-icon>
+<as24-icon class="sc-icon-s" type="android" title="android"></as24-icon>
 ```
+
+More documentation on usage: https://autoscout24.github.io/showcar-ui/#icon-target
 
 All the available icons are placed within the icons folder, using subfolder is possible too.  
 If you want to use the icons without the showcar-ui library, you have to load a polyfill for custom elements first.  
@@ -36,35 +38,6 @@ See <https://cdnjs.com/libraries/document-register-element>
 <script src="//cdnjs.cloudflare.com/ajax/libs/document-register-element/0.5.4/document-register-element.js"></script>
 ```
 
-## Icon Sizing
-
-If you only use showcar-icons you need to define the size of the icons with your own css code.
-
-### How to create different sizes
-
-You can change the size of an svg by overriding css declarations.  
-Example:
-
-```css
-as24-icon[type="navigation/car"] {
-  svg {
-    width: 42px;
-    height: 34px;
-  }
-}
-```
-
-### Sizing with ShowCarUI
-
-If you include showcar-ui, all as24-icons have a default size of 16px x 16px.
-In case you need a different size, just set it for the as24-icon, the svg will fit the size:
-
-```css
-as24-icon[type="navigation/car"] {
-  width: 64px;
-  height: 64px;
-}
-```
 
 ## Inline Icons
 
