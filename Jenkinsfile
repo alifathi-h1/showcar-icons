@@ -42,11 +42,15 @@ pipeline {
       }
     }
   }
-
+  
   post {
     failure {
-        echo 'Pipeline failed 💣'
-        slackSend channel: 'bsg-ignition-alerts', color: '#FF0000', message: "💣 ${env.JOB_NAME} [${env.BUILD_NUMBER}] failed. (<${env.BUILD_URL}|Open>)"
+      script {
+        if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'main') {
+          slackSend channel: 'bsg-ignition-fizz', color: 'danger',
+          message: "The pipeline <${env.BUILD_URL}|${currentBuild.fullDisplayName}> failed."
+        }
+      }
     }
   }
 }
