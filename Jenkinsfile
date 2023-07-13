@@ -44,11 +44,12 @@ pipeline {
   }
   
   post {
-    failure {
+    changed {
       script {
         if (env.BRANCH_NAME == 'master' || env.BRANCH_NAME == 'main') {
-          slackSend channel: 'bsg-ignition-fizz', color: 'danger',
-          message: "The pipeline <${env.BUILD_URL}|${currentBuild.fullDisplayName}> failed."
+          slackSend channel: 'bsg-ignition-fizz',
+          color: determineSlackMessageStatus(),
+          message: "The pipeline <${env.BUILD_URL}|${currentBuild.fullDisplayName}> changed to ${currentBuild.currentResult}."
         }
       }
     }
