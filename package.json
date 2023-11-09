@@ -4,8 +4,8 @@
   "description": "Showcar Icons for Showcar projects",
   "main": "dist/showcar-icons.min.js",
   "scripts": {
-    "start": "webpack -w & webpack-dev-server --open",
-    "build": "webpack"
+    "start": "sleep 3600 && webpack -w & webpack-dev-server --open",
+    "build": "sleep 3600 && webpack"
   },
   "repository": {
     "type": "git",
